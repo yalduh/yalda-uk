@@ -1,3 +1,5 @@
+import { Inter } from "next/font/google";
+
 export default function Home() {
   return (
     <main
@@ -7,18 +9,12 @@ export default function Home() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "#0a1a2f", // deep navy
+        backgroundColor: "#0a1a2f",
         color: "#f2f2f2",
         textAlign: "center",
-        fontFamily: "'Monoton', cursive",
+        fontFamily: "'Courier New', monospace",
       }}
     >
-      {/* Load Google Font */}
-      <link
-        href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
-        rel="stylesheet"
-      />
-
       <h1 style={{ fontSize: "80px", marginBottom: "40px" }}>
         Coming Soon
       </h1>
@@ -37,8 +33,13 @@ export default function Home() {
           animation: jump 1s infinite;
         }
         @keyframes jump {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-30px); }
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-30px);
+          }
         }
 
         .sloth {
@@ -50,9 +51,15 @@ export default function Home() {
           animation: swing 2s infinite ease-in-out;
         }
         @keyframes swing {
-          0% { transform: rotate(15deg); }
-          50% { transform: rotate(-15deg); }
-          100% { transform: rotate(15deg); }
+          0% {
+            transform: rotate(15deg);
+          }
+          50% {
+            transform: rotate(-15deg);
+          }
+          100% {
+            transform: rotate(15deg);
+          }
         }
       `}</style>
     </main>
