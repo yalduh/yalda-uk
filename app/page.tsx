@@ -4,6 +4,8 @@ export default function Home() {
       style={{
         minHeight: "100vh",
         display: "flex",
+        flexDirection: "column",
+        gap: "24px",
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "navy",
@@ -11,7 +13,9 @@ export default function Home() {
         fontSize: "48px",
       }}
     >
-      Hello World
+      Coming Soon
+      <div style={{ fontSize: "80px" }}>🦕</div>
+      <div style={{ fontSize: "64px" }}>🦥</div>
     </main>
   );
 }
