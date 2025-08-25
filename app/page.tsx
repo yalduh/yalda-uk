@@ -1,3 +1,7 @@
+import { Cinzel_Decorative } from "next/font/google";
+
+const cinzel = Cinzel_Decorative({ weight: "700", subsets: ["latin"] });
+
 export default function Home() {
   return (
     <main
@@ -8,25 +12,32 @@ export default function Home() {
         gap: "24px",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "navy",
+        backgroundColor: "#0a1633", // dark navy blue
         color: "white",
-        fontSize: "48px",
         position: "relative",
         overflow: "hidden",
         textAlign: "center",
       }}
     >
-      Coming Soon
+      {/* Coming Soon headline */}
+      <h1
+        className={cinzel.className}
+        style={{
+          fontSize: "100px",
+          textShadow: "0 0 10px rgba(255,255,255,0.5), 2px 2px 6px rgba(0,0,0,0.6)",
+        }}
+      >
+        Coming Soon
+      </h1>
 
-      {/* Jumping dino */}
-      <div className="dino" style={{ fontSize: "96px" }}>🦕</div>
+      {/* Jumping Dino */}
+      <div className="dino" style={{ fontSize: "120px" }}>🦕</div>
 
-      {/* Hanging sloth in corner */}
-      <div className="sloth" style={{ fontSize: "80px", position: "absolute", top: 20, right: 32 }}>
+      {/* Hanging Sloth */}
+      <div className="sloth" style={{ fontSize: "90px", position: "absolute", top: 20, right: 32 }}>
         🦥
       </div>
 
-      {/* Plain CSS (not styled-jsx) */}
       <style>{`
         .dino {
           display: inline-block;
@@ -34,21 +45,20 @@ export default function Home() {
         }
         @keyframes jump {
           0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-24px); }
+          50% { transform: translateY(-28px); }
         }
 
         .sloth {
           display: inline-block;
           transform-origin: top center;
-          animation: swing 2s infinite ease-in-out;
+          animation: swing 2.5s infinite ease-in-out;
         }
         @keyframes swing {
-          0% { transform: rotate(12deg); }
-          50% { transform: rotate(-12deg); }
-          100% { transform: rotate(12deg); }
+          0% { transform: rotate(14deg); }
+          50% { transform: rotate(-14deg); }
+          100% { transform: rotate(14deg); }
         }
       `}</style>
     </main>
   );
 }
-
