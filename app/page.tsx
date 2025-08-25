@@ -10,10 +10,16 @@ export default function Home() {
         backgroundColor: "#0a1a2f", // deep navy
         color: "#f2f2f2",
         textAlign: "center",
-        fontFamily: "'Courier New', monospace",
+        fontFamily: "'Monoton', cursive",
       }}
     >
-      <h1 style={{ fontSize: "64px", fontWeight: "bold", marginBottom: "40px" }}>
+      {/* Load Google Font */}
+      <link
+        href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+        rel="stylesheet"
+      />
+
+      <h1 style={{ fontSize: "80px", marginBottom: "40px" }}>
         Coming Soon
       </h1>
 
@@ -26,39 +32,27 @@ export default function Home() {
       <style jsx>{`
         .dino {
           display: inline-block;
-          font-size: 80px;
+          font-size: 100px;
           margin-top: 40px;
           animation: jump 1s infinite;
         }
         @keyframes jump {
-          0%,
-          100% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-20px);
-          }
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-30px); }
         }
 
         .sloth {
           position: absolute;
           top: 20px;
           right: 40px;
-          font-size: 60px;
-          display: inline-block;
+          font-size: 80px;
           transform-origin: top center;
           animation: swing 2s infinite ease-in-out;
         }
         @keyframes swing {
-          0% {
-            transform: rotate(10deg);
-          }
-          50% {
-            transform: rotate(-10deg);
-          }
-          100% {
-            transform: rotate(10deg);
-          }
+          0% { transform: rotate(15deg); }
+          50% { transform: rotate(-15deg); }
+          100% { transform: rotate(15deg); }
         }
       `}</style>
     </main>
