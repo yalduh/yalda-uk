@@ -1,16 +1,18 @@
 export default function Home() {
   return (
-    <main style={{
-      minHeight: "100vh",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      backgroundColor: "#0a1a2f",
-      color: "#f2f2f2",
-      textAlign: "center",
-      fontFamily: "'Courier New', monospace",
-    }}>
+    <main
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#0a1a2f", // deep navy
+        color: "#f2f2f2",
+        textAlign: "center",
+        fontFamily: "'Courier New', monospace",
+      }}
+    >
       <h1 style={{ fontSize: "64px", fontWeight: "bold", marginBottom: "40px" }}>
         Coming Soon
       </h1>
@@ -18,7 +20,7 @@ export default function Home() {
       {/* Jumping Dino */}
       <span className="dino">🦕</span>
 
-      {/* Hanging Sloth in the corner */}
+      {/* Hanging Sloth */}
       <span className="sloth">🦥</span>
 
       <style jsx>{`
@@ -29,8 +31,13 @@ export default function Home() {
           animation: jump 1s infinite;
         }
         @keyframes jump {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-20px); }
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
         }
 
         .sloth {
@@ -43,9 +50,15 @@ export default function Home() {
           animation: swing 2s infinite ease-in-out;
         }
         @keyframes swing {
-          0% { transform: rotate(10deg); }
-          50% { transform: rotate(-10deg); }
-          100% { transform: rotate(10deg); }
+          0% {
+            transform: rotate(10deg);
+          }
+          50% {
+            transform: rotate(-10deg);
+          }
+          100% {
+            transform: rotate(10deg);
+          }
         }
       `}</style>
     </main>
